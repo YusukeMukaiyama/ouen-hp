@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>すけ君のHP制作 | 北河内応援プロジェクト</title>
+  <meta name="description" content="北河内(枚方・寝屋川・交野・四條畷・大東・門真・守口)で頑張るお店・事業者さんに、AIを駆使した上質ホームページを応援価格5万円〜でお作りします。Instagramフォロワー3,300名のグルメ探検すけ君が、あなたのお店をPRします。" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="すけ君のHP制作 | 北河内応援プロジェクト" />
+  <meta property="og:description" content="AIを駆使して破格5万円〜。北河内の地元事業者を応援するHP制作。Instagram3,300名へのPR枠付き。" />
+  <meta property="og:image" content="./images/sukekun-beer.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ske-yellow': '#FFE042',
+            'ske-cream':  '#FFF4B8',
+            'ske-red':    '#E8554E',
+            'ske-navy':   '#1F4F6B',
+            'ske-brown':  '#8B5A2B',
+          },
+          fontFamily: {
+            rounded: ['"M PLUS Rounded 1c"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ベース */
+    html, body { font-family: 'M PLUS Rounded 1c', sans-serif; }
+
+    /* wiggle — ヒーロー画像 3秒ループ */
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-2deg) translateY(0px); }
+      50%       { transform: rotate(2deg) translateY(-12px); }
+    }
+    .animate-wiggle { animation: wiggle 3s ease-in-out infinite; }
+
+    /* スタンプ外枠の回転 */
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    .animate-spin-slow { animation: spin-slow 10s linear infinite; }
+
+    /* ストライプ背景 — ヒーロー・CTA共通 */
+    .stripe-yellow {
+      background: repeating-linear-gradient(
+        -45deg,
+        #FFE042 0px, #FFE042 16px,
+        #F5D200 16px, #F5D200 32px
+      );
+    }
+    .stripe-red {
+      background: repeating-linear-gradient(
+        -45deg,
+        #E8554E 0px, #E8554E 16px,
+        #D44040 16px, #D44040 32px
+      );
+    }
+
+    /* Instagram グラデーションボタン */
+    .ig-btn {
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+
+    /* カード hover */
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+  </style>
+</head>
+<body class="bg-ske-yellow text-ske-navy">
+
+<!-- ════════════════════════════════
+     HEADER
+════════════════════════════════ -->
+<header class="sticky top-0 z-50 bg-ske-navy shadow-lg">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <p class="font-black">
+      <span class="text-ske-yellow text-base">🐒 すけ君のHP制作</span>
+      <span class="text-white/40 text-xs ml-2 hidden sm:inline">北河内応援プロジェクト</span>
+    </p>
+    <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+       class="bg-ske-red text-white text-xs font-black px-4 py-2 rounded-full hover:opacity-90 transition">
+      📩 DMで相談する
+    </a>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════
+     1. HERO
+════════════════════════════════ -->
+<section class="stripe-yellow relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-4 pt-14 pb-28 md:pt-20 md:pb-32">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12">
+
+      <!-- テキスト -->
+      <div class="flex-1 text-center md:text-left order-2 md:order-1">
+
+        <!-- エリアバッジ -->
+        <div class="flex flex-wrap gap-2 mb-5 justify-center md:justify-start">
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">枚方</span>
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">寝屋川</span>
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">交野</span>
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">四條畷</span>
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">大東</span>
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">門真</span>
+          <span class="bg-ske-navy text-ske-yellow text-xs font-black px-3 py-1 rounded-full">守口</span>
+        </div>
+
+        <!-- メイン見出し -->
+        <h1 class="text-3xl md:text-5xl font-black text-ske-navy leading-tight mb-5">
+          北河内のお店のHP、<br>すけ君が作ります。
+        </h1>
+
+        <!-- サブコピー -->
+        <p class="text-base md:text-lg font-bold text-ske-navy leading-relaxed mb-6">
+          AIをガッツリ使って、<br class="sm:hidden">
+          <span class="line-through text-ske-navy/40 font-bold text-sm">相場40〜60万</span>のHPを<br>
+          <span class="text-ske-red text-2xl md:text-3xl font-black">応援価格 5万円〜。</span><br>
+          さらに Instagram <span class="font-black">3,300名</span> へのPR枠付き。
+        </p>
+
+        <!-- CTA ボタン -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-5">
+          <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+             class="bg-ske-red text-white font-black text-lg px-6 py-4 rounded-2xl hover:opacity-90 transition shadow-xl text-center">
+            Instagram DMで相談する 🍻
+          </a>
+          <a href="#flow"
+             class="bg-ske-navy text-white font-bold text-base px-6 py-4 rounded-2xl hover:opacity-80 transition text-center">
+            流れを見る ↓
+          </a>
+        </div>
+
+        <!-- 注釈 -->
+        <p class="text-xs text-ske-navy/60 font-bold mb-5">
+          ※相談・お見積もりは無料。北河内エリア限定。
+        </p>
+
+        <!-- フォロワーバッジ -->
+        <div class="inline-flex items-center gap-2 bg-white/80 backdrop-blur rounded-full px-4 py-2 shadow-md">
+          <span class="text-pink-500 font-black">📸</span>
+          <span class="text-xs font-black text-ske-navy">@gurume_tanken</span>
+          <span class="text-xs text-ske-navy/60 font-bold">/ フォロワー 3,300名</span>
+        </div>
+      </div>
+
+      <!-- 画像 -->
+      <div class="flex-shrink-0 order-1 md:order-2 relative">
+        <div class="relative inline-block">
+          <img src="images/sukekun-beer.png" alt="すけ君がビールで乾杯"
+               onerror="this.style.display='none'"
+               class="animate-wiggle w-56 md:w-80 drop-shadow-2xl rounded-3xl" />
+
+          <!-- 吹き出し -->
+          <div class="absolute -top-5 -left-4 md:-left-10 bg-white rounded-2xl px-4 py-2 shadow-lg border-2 border-ske-yellow">
+            <p class="text-sm font-black text-ske-navy whitespace-nowrap">HP制作、はじめました!</p>
+            <!-- 三角 -->
+            <span class="absolute -bottom-2 left-5 w-0 h-0"
+                  style="border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #FFE042;"></span>
+            <span class="absolute -bottom-1.5 left-5 w-0 h-0"
+                  style="border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid white;"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 波形ディバイダー -->
+  <div class="absolute bottom-0 left-0 right-0 leading-none">
+    <svg viewBox="0 0 1200 64" preserveAspectRatio="none" class="w-full h-16">
+      <path d="M0,32 C150,64 350,0 600,32 C850,64 1050,0 1200,32 L1200,64 L0,64 Z" fill="#FFF4B8"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     2. お悩み提起
+════════════════════════════════ -->
+<section class="bg-ske-cream py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-4xl font-black text-ske-navy mb-2">
+        こんなお悩み、ありませんか?
+      </h2>
+      <p class="text-sm md:text-base text-ske-navy/60 font-bold">
+        — 北河内で頑張るお店・事業者のみなさんへ —
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-ske-yellow/50 card-hover">
+        <div class="text-4xl mb-4">😩</div>
+        <h3 class="font-black text-ske-navy text-lg leading-snug mb-3">
+          Instagramは頑張ってるけど<br>HPがない
+        </h3>
+        <p class="text-sm text-ske-navy/70 leading-relaxed">
+          Googleで店名を検索しても出てこない。問い合わせは知り合いからだけ。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-ske-yellow/50 card-hover">
+        <div class="text-4xl mb-4">💸</div>
+        <h3 class="font-black text-ske-navy text-lg leading-snug mb-3">
+          業者の見積もりが<br>40〜60万で諦めた
+        </h3>
+        <p class="text-sm text-ske-navy/70 leading-relaxed">
+          月額○万円のリース契約も多くて、踏み切れない…。
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 shadow-md border-2 border-ske-yellow/50 card-hover">
+        <div class="text-4xl mb-4">📱</div>
+        <h3 class="font-black text-ske-navy text-lg leading-snug mb-3">
+          昔作ったHPが<br>スマホで見れない
+        </h3>
+        <p class="text-sm text-ske-navy/70 leading-relaxed">
+          数年前に作ったきり放置。今のお客さんはほぼスマホなのに…。
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <p class="text-xl md:text-2xl font-black text-ske-red">
+        その「もったいない」、すけ君が解決します。🐒
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 波形ディバイダー (cream → yellow) -->
+<div class="bg-ske-cream leading-none">
+  <svg viewBox="0 0 1200 64" preserveAspectRatio="none" class="w-full h-16">
+    <path d="M0,0 C400,64 800,0 1200,64 L1200,64 L0,64 Z" fill="#FFE042"/>
+  </svg>
+</div>
+
+
+<!-- ════════════════════════════════
+     3. なぜ5万円〜?
+════════════════════════════════ -->
+<section class="bg-ske-yellow py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <p class="text-ske-red font-black text-xs tracking-widest uppercase mb-2">WHY SO CHEAP?</p>
+      <h2 class="text-2xl md:text-4xl font-black text-ske-navy">
+        なぜ5万円〜でできるの?
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-3xl p-7 shadow-md text-center card-hover">
+        <div class="text-5xl mb-4">🤖</div>
+        <h3 class="font-black text-ske-navy text-lg mb-3">最新AIをフル活用</h3>
+        <p class="text-sm text-ske-navy/70 leading-relaxed">
+          文章/デザイン/コーディングをAI効率化、従来の1/5の時間で同等品質のHP
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-7 shadow-md text-center card-hover">
+        <div class="text-5xl mb-4">📸</div>
+        <h3 class="font-black text-ske-navy text-lg mb-3">Instagramの素材を活用</h3>
+        <p class="text-sm text-ske-navy/70 leading-relaxed">
+          既存の写真をそのまま使うので撮影費0円
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-7 shadow-md text-center card-hover">
+        <div class="text-5xl mb-4">🐒❤️</div>
+        <h3 class="font-black text-ske-navy text-lg mb-3">北河内応援価格</h3>
+        <p class="text-sm text-ske-navy/70 leading-relaxed">
+          枚方出身のすけ君が地元応援したくて始めたプロジェクト、利益度外視
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     4. 料金プラン
+════════════════════════════════ -->
+<section class="bg-ske-cream py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <p class="text-ske-red font-black text-xs tracking-widest uppercase mb-2">PRICING</p>
+      <h2 class="text-2xl md:text-4xl font-black text-ske-navy">料金プラン</h2>
+    </div>
+
+    <!-- カード2枚 — items-center で scale-105 が自然に見える -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto items-center">
+
+      <!-- ライトプラン -->
+      <div class="bg-white rounded-3xl p-8 shadow-md border-2 border-ske-yellow/60 card-hover">
+        <p class="text-ske-navy/50 font-bold text-sm mb-1">まずは1ページから</p>
+        <h3 class="text-2xl font-black text-ske-navy mb-4">ライトプラン</h3>
+        <div class="mb-5">
+          <span class="line-through text-ske-navy/40 text-sm font-bold">相場 30〜40万</span>
+          <div class="text-4xl font-black text-ske-red mt-1">¥50,000<span class="text-xl font-bold">〜</span></div>
+        </div>
+        <ul class="space-y-2.5 text-sm text-ske-navy/80 mb-7">
+          <li class="flex items-start gap-2">
+            <span class="text-ske-red font-black mt-0.5 flex-shrink-0">✓</span>スマホ最適化(レスポンシブ)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-red font-black mt-0.5 flex-shrink-0">✓</span>Instagram埋め込み
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-red font-black mt-0.5 flex-shrink-0">✓</span>お問い合わせフォーム / LINE・電話ボタン
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-red font-black mt-0.5 flex-shrink-0">✓</span>独自ドメイン取得サポート
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-red font-black mt-0.5 flex-shrink-0">✓</span>Google検索登録(SEO基本設定)
+          </li>
+        </ul>
+        <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+           class="block text-center bg-ske-navy text-white font-black py-3.5 rounded-2xl hover:opacity-80 transition">
+          DMで相談する
+        </a>
+      </div>
+
+      <!-- スタンダードプラン (一番人気 / scale-105) -->
+      <div class="bg-ske-navy rounded-3xl p-8 shadow-2xl border-2 border-ske-yellow scale-105 relative card-hover">
+        <!-- 人気バッジ -->
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-ske-red text-white text-xs font-black px-5 py-1.5 rounded-full whitespace-nowrap shadow-lg">
+          ★ 一番人気
+        </div>
+
+        <p class="text-white/50 font-bold text-sm mb-1">しっかり集客したい</p>
+        <h3 class="text-2xl font-black text-ske-yellow mb-4">スタンダードプラン</h3>
+        <div class="mb-5">
+          <span class="line-through text-white/30 text-sm font-bold">相場 50〜80万</span>
+          <div class="text-4xl font-black text-ske-yellow mt-1">¥100,000<span class="text-xl font-bold">〜</span></div>
+        </div>
+        <ul class="space-y-2.5 text-sm text-white/80 mb-7">
+          <li class="flex items-start gap-2">
+            <span class="text-ske-yellow font-black mt-0.5 flex-shrink-0">✓</span>ライトプランの全機能
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-yellow font-black mt-0.5 flex-shrink-0">✓</span>メニュー・実績ギャラリー(無制限追加可)
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-yellow font-black mt-0.5 flex-shrink-0">✓</span>会社概要・スタッフ紹介・お知らせ機能
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-ske-yellow font-black mt-0.5 flex-shrink-0">✓</span>Googleマップ連携・口コミ表示
+          </li>
+          <li class="flex items-start gap-2 font-black">
+            <span class="text-ske-yellow font-black mt-0.5 flex-shrink-0">✓</span>
+            <span class="text-white">すけ君Instagram(3,300名)でのPR投稿付き</span>
+          </li>
+        </ul>
+        <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+           class="block text-center bg-ske-yellow text-ske-navy font-black py-3.5 rounded-2xl hover:opacity-90 transition">
+          DMで相談する 🍻
+        </a>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-ske-navy/50 font-bold mt-10">
+      ※どちらも初回相談・お見積もり完全無料 / 北河内エリア限定価格
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     5. 制作の流れ
+════════════════════════════════ -->
+<section id="flow" class="stripe-yellow py-16 md:py-24">
+  <div class="max-w-2xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <p class="text-ske-red font-black text-xs tracking-widest uppercase mb-2">PROCESS</p>
+      <h2 class="text-2xl md:text-4xl font-black text-ske-navy mb-2">制作の流れ</h2>
+      <p class="text-sm font-bold text-ske-navy/60">最短2週間でHPが公開できます</p>
+    </div>
+
+    <div class="space-y-5">
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-12 h-12 bg-ske-red rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg">1</div>
+        <div class="bg-white rounded-2xl p-5 shadow-md flex-1 card-hover">
+          <h3 class="font-black text-ske-navy text-lg mb-1">Instagram DMでご相談</h3>
+          <p class="text-sm text-ske-navy/70 leading-relaxed">「HPの相談です」だけでOK</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-12 h-12 bg-ske-red rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg">2</div>
+        <div class="bg-white rounded-2xl p-5 shadow-md flex-1 card-hover">
+          <h3 class="font-black text-ske-navy text-lg mb-1">サンプルHPを見てもらう</h3>
+          <p class="text-sm text-ske-navy/70 leading-relaxed">
+            あなたのInstagramを参考に、すけ君が先にサンプルを作ってお見せ。<br>気に入らなければそこで終了でOK
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-12 h-12 bg-ske-red rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg">3</div>
+        <div class="bg-white rounded-2xl p-5 shadow-md flex-1 card-hover">
+          <h3 class="font-black text-ske-navy text-lg mb-1">本制作・修正</h3>
+          <p class="text-sm text-ske-navy/70 leading-relaxed">
+            プラン決定後、約1〜2週間で本制作。修正は何度でもOK
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="flex-shrink-0 w-12 h-12 bg-ske-red rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg">4</div>
+        <div class="bg-white rounded-2xl p-5 shadow-md flex-1 card-hover">
+          <h3 class="font-black text-ske-navy text-lg mb-1">公開 + Instagram でPR</h3>
+          <p class="text-sm text-ske-navy/70 leading-relaxed">
+            独自ドメインで公開後、すけ君のInstagram(3,300名)であなたのお店を紹介投稿
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     6. すけ君について
+════════════════════════════════ -->
+<section class="bg-ske-cream py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+
+      <!-- 画像 (左) -->
+      <div class="flex-shrink-0">
+        <img src="images/sukekun-steak.png" alt="すけ君がステーキを楽しんでいる"
+             onerror="this.style.display='none'"
+             class="w-56 md:w-72 rounded-3xl shadow-2xl border-4 border-ske-yellow" />
+      </div>
+
+      <!-- テキスト (右) -->
+      <div class="flex-1 text-center md:text-left">
+        <div class="inline-block bg-ske-yellow text-ske-navy text-xs font-black px-4 py-1.5 rounded-full mb-4 shadow">
+          すけ君って?
+        </div>
+        <h2 class="text-2xl md:text-3xl font-black text-ske-navy leading-tight mb-5">
+          枚方出身、北河内をこよなく愛する<br>グルメ&応援モンキー🐒
+        </h2>
+        <p class="text-sm md:text-base text-ske-navy/80 leading-relaxed mb-4">
+          Instagram「@gurume_tanken」では、北河内エリアの美味しいお店・面白いお店をすけ君目線で紹介中。フォロワー3,300名超の地元密着アカウントです。
+        </p>
+        <p class="text-sm md:text-base text-ske-navy/80 leading-relaxed mb-6">
+          地元で頑張っているお店や事業者さんに、もっとたくさんの人に知ってほしい。<br>
+          そんな想いから、HP制作で応援するプロジェクトを始めました。
+        </p>
+        <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+           class="ig-btn text-white font-black px-6 py-3.5 rounded-2xl hover:opacity-90 transition shadow-lg inline-block">
+          📸 Instagram @gurume_tanken をフォローする
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     7. 最終 CTA
+════════════════════════════════ -->
+<section id="contact" class="stripe-red py-16 md:py-24 relative overflow-hidden">
+  <div class="max-w-2xl mx-auto px-4 text-center relative z-10">
+
+    <!-- 先着10社スタンプ -->
+    <div class="inline-flex items-center justify-center mb-8 relative" style="width:120px;height:120px;">
+      <!-- 回転する破線外枠 -->
+      <div class="absolute inset-0 rounded-full border-4 border-dashed border-white/70 animate-spin-slow"></div>
+      <!-- 白い円 -->
+      <div class="relative bg-white rounded-full w-24 h-24 flex flex-col items-center justify-center border-4 border-white shadow-2xl">
+        <span class="text-ske-red font-black text-xs leading-tight">先着</span>
+        <span class="text-ske-red font-black text-3xl leading-none">10社</span>
+        <span class="text-ske-red font-black text-xs leading-tight">限定</span>
+      </div>
+    </div>
+
+    <h2 class="text-2xl md:text-4xl font-black text-white mb-4 leading-tight">
+      まずは Instagram DMで<br>気軽にどうぞ🍻
+    </h2>
+    <p class="text-white/80 font-bold text-base md:text-lg mb-8 leading-relaxed">
+      「HPの相談です」の一言だけでOK。<br>
+      サンプルHPを作ってからお返事します。
+    </p>
+
+    <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-white text-ske-red font-black text-xl md:text-2xl px-10 py-5 rounded-2xl hover:scale-105 transition-transform shadow-2xl mb-8">
+      📩 @gurume_tanken にDMする
+    </a>
+
+    <div class="text-white/70 text-sm font-bold space-y-1">
+      <p>対応エリア: 枚方市・寝屋川市・交野市・四條畷市・大東市・門真市・守口市</p>
+      <p>対応業種: 業種問わず（飲食店・美容院・整体・教室・士業・職人・小売・サービス業など）</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     8. フッター
+════════════════════════════════ -->
+<footer class="bg-ske-navy py-8">
+  <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+    <p class="text-white font-black text-base md:text-lg">
+      🐒 すけ君のHP制作 — 北河内応援プロジェクト
+    </p>
+    <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+       class="text-ske-yellow font-bold text-sm hover:underline block">
+      Instagram: @gurume_tanken
+    </a>
+    <p class="text-white/30 text-xs">© 2025 グルメ探検すけ君</p>
+  </div>
+</footer>
+
+</body>
+</html>
