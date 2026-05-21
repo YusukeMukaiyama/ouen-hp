@@ -93,37 +93,62 @@
     /* カード hover */
     .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
     .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+
+    /* フローティング申込みCTA のパルスアニメーション */
+    @keyframes pulse-cta {
+      0%, 100% { transform: scale(1); box-shadow: 0 10px 28px rgba(232,85,78,0.45); }
+      50%      { transform: scale(1.04); box-shadow: 0 16px 36px rgba(232,85,78,0.65); }
+    }
+    .animate-pulse-cta { animation: pulse-cta 2.4s ease-in-out infinite; }
   </style>
 </head>
 <body class="bg-ouen-yellow text-ouen-navy">
 
 <!-- ════════════════════════════════
-     HEADER
+     HEADER (告知バー + ヘッダー本体を sticky でまとめて追従)
 ════════════════════════════════ -->
-<header class="sticky top-0 z-50 bg-ouen-navy shadow-lg">
-  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-    <p class="font-black">
-      <span class="text-ouen-yellow text-base">🐒 グルメ探検隊のHP制作</span>
-      <span class="text-white/40 text-xs ml-2 hidden sm:inline">北河内応援プロジェクト</span>
-    </p>
-    <div class="flex items-center gap-1.5">
-      <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
-         class="bg-ouen-red text-white text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
-        📩 DM
-      </a>
-      <!-- TODO: 公式LINE URL を差し替え -->
-      <a href="https://lin.ee/uV6KUCu" target="_blank" rel="noopener noreferrer"
-         class="bg-[#06C755] text-white text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
-        💬 LINE
-      </a>
-      <!-- TODO: 連絡先メアド を差し替え -->
-      <a href="mailto:ouenhp@gmail.com"
-         class="bg-ouen-yellow text-ouen-navy text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
-        ✉️ メール
-      </a>
-    </div>
+<div class="sticky top-0 z-50">
+  <!-- 告知バー: 相談はここから3つで受け付け -->
+  <div class="bg-ouen-red text-white text-center font-bold py-1.5 px-2 leading-snug">
+    <span class="sm:hidden text-[11px]">📢 ご相談はこちら👇 インスタDM / LINE / メール</span>
+    <span class="hidden sm:inline text-xs">📢 ご相談はインスタDM・LINE・メールの3つの方法でお気軽にどうぞ！</span>
   </div>
-</header>
+
+  <header class="bg-ouen-navy shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 py-2.5 sm:py-3">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
+        <p class="font-black text-center sm:text-left">
+          <span class="text-ouen-yellow text-base">🐒 グルメ探検隊のHP制作</span>
+          <span class="text-white/40 text-xs ml-2 hidden sm:inline">北河内応援プロジェクト</span>
+        </p>
+        <div class="flex items-center gap-1.5">
+          <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+             class="bg-ouen-red text-white text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
+            📩 インスタDM
+          </a>
+          <!-- TODO: 公式LINE URL を差し替え -->
+          <a href="https://lin.ee/uV6KUCu" target="_blank" rel="noopener noreferrer"
+             class="bg-[#06C755] text-white text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
+            💬 LINE
+          </a>
+          <!-- TODO: 連絡先メアド を差し替え -->
+          <a href="mailto:ouenhp@gmail.com"
+             class="bg-ouen-yellow text-ouen-navy text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
+            ✉️ メール
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- ════════════════════════════════
+     FLOATING CTA — お申込みフォーム (全ページ常時表示)
+════════════════════════════════ -->
+<a href="https://forms.gle/4SzSsPndtteQXCSL8" target="_blank" rel="noopener noreferrer"
+   class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-ouen-red text-white font-black text-sm sm:text-base px-5 py-3.5 sm:px-6 sm:py-4 rounded-full shadow-2xl border-2 border-white hover:scale-105 transition-transform animate-pulse-cta whitespace-nowrap">
+  📝 お申込みはこちら
+</a>
 
 
 <!-- ════════════════════════════════
@@ -454,9 +479,13 @@
         <div class="flex-shrink-0 w-12 h-12 bg-ouen-red rounded-full flex items-center justify-center text-white font-black text-xl shadow-lg">2</div>
         <div class="bg-white rounded-2xl p-5 shadow-md flex-1 card-hover">
           <h3 class="font-black text-ouen-navy text-lg mb-1">お申し込みフォーム</h3>
-          <p class="text-sm text-ouen-navy/70 leading-relaxed">
+          <p class="text-sm text-ouen-navy/70 leading-relaxed mb-3">
             お店・事業の情報をフォームでご入力いただきます。
           </p>
+          <a href="https://forms.gle/4SzSsPndtteQXCSL8" target="_blank" rel="noopener noreferrer"
+             class="inline-block bg-ouen-red text-white font-black text-sm px-4 py-2 rounded-full hover:opacity-90 transition shadow">
+            📝 お申し込みフォームを開く →
+          </a>
         </div>
       </div>
 
