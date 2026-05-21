@@ -143,11 +143,14 @@
 </div>
 
 <!-- ════════════════════════════════
-     FLOATING CTA — お申込みフォーム (全ページ常時表示)
+     FLOATING CTA — お申込みフォーム (全ページ常時表示・レスポンシブ)
+     スマホ: 小さめボタン「お申込み」だけにしてコンテンツへの被り最小化
+     sm以上: 「お申込みはこちら」のフル表示
 ════════════════════════════════ -->
 <a href="https://forms.gle/4SzSsPndtteQXCSL8" target="_blank" rel="noopener noreferrer"
-   class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 bg-ouen-red text-white font-black text-sm sm:text-base px-5 py-3.5 sm:px-6 sm:py-4 rounded-full shadow-2xl border-2 border-white hover:scale-105 transition-transform animate-pulse-cta whitespace-nowrap">
-  📝 お申込みはこちら
+   class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40 bg-ouen-red text-white font-black text-xs sm:text-sm md:text-base px-3.5 py-2.5 sm:px-5 sm:py-3.5 md:px-6 md:py-4 rounded-full shadow-2xl border-2 border-white hover:scale-105 transition-transform animate-pulse-cta whitespace-nowrap">
+  <span class="sm:hidden">📝 お申込み</span>
+  <span class="hidden sm:inline">📝 お申込みはこちら</span>
 </a>
 
 
