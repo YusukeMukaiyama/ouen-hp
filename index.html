@@ -25,20 +25,20 @@
   <meta name="twitter:description" content="最新AIをフル活用して破格9万円ポッキリ。北河内の地元事業者を応援するHP制作。飲食・美容・整体・教室・士業・職人 歓迎。" />
   <meta name="twitter:image" content="https://ouen-hp.jp/images/mascot-beer.webp" />
 
-  <!-- LCP image preload (Hero mascot) -->
-  <link rel="preload" as="image" href="images/mascot-beer.webp" fetchpriority="high" />
+  <!-- 画像 preload は削除: モバイルではヒーロー画像が FV 外に移動したため LCP 要素はテキストに変化。
+       未使用 preload が Lighthouse の警告を出すのを回避 -->
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (weight 800 は未使用なので削除し転送量を圧縮) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- Tailwind (static build) -->
   <link rel="stylesheet" href="dist/style.css" />
 
   <style>
     /* ベース */
-    html, body { font-family: 'M PLUS Rounded 1c', sans-serif; }
+    html, body { font-family: 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic UI', sans-serif; }
 
     /* wiggle — ヒーロー画像 3秒ループ */
     @keyframes wiggle {
