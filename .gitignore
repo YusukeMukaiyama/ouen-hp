@@ -1,3 +1,7 @@
 # Google Apps Script はGoogleフォーム側で直接管理するためリポジトリに含めない
 # (振込口座など機微情報を含む可能性があるため)
 forms/
+
+# Tailwind build
+node_modules/
+package-lock.json

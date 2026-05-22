@@ -25,31 +25,18 @@
   <meta name="twitter:description" content="最新AIをフル活用して破格9万円ポッキリ。北河内の地元事業者を応援するHP制作。業種問わず大歓迎。" />
   <meta name="twitter:image" content="https://ouen-hp.jp/images/mascot-beer.webp" />
 
-  <!-- Google Fonts -->
+  <!-- LCP image preload (Hero mascot) -->
+  <link rel="preload" as="image" href="images/mascot-beer.webp" fetchpriority="high" />
+
+  <!-- Google Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" /></noscript>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'ouen-yellow': '#FFE042',
-            'ouen-cream':  '#FFF4B8',
-            'ouen-red':    '#E8554E',
-            'ouen-navy':   '#1F4F6B',
-            'ouen-brown':  '#8B5A2B',
-          },
-          fontFamily: {
-            rounded: ['"M PLUS Rounded 1c"', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind (static build) -->
+  <link rel="stylesheet" href="dist/style.css" />
 
   <style>
     /* ベース */
@@ -154,6 +141,8 @@
 </a>
 
 
+<main>
+
 <!-- ════════════════════════════════
      1. HERO
 ════════════════════════════════ -->
@@ -228,6 +217,7 @@
       <div class="flex-shrink-0 order-1 md:order-2 relative">
         <div class="relative inline-block">
           <img src="images/mascot-beer.webp" alt="グルメ探検隊のキャラクターがビールで乾杯"
+               fetchpriority="high" decoding="async"
                onerror="this.style.display='none'"
                class="animate-wiggle w-56 md:w-80 drop-shadow-2xl rounded-3xl" />
 
@@ -688,6 +678,8 @@
   </div>
 </section>
 
+
+</main>
 
 <!-- ════════════════════════════════
      8. フッター

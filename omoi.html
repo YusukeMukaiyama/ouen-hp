@@ -22,31 +22,15 @@
   <meta property="og:locale" content="ja_JP" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" /></noscript>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'ouen-yellow': '#FFE042',
-            'ouen-cream':  '#FFF4B8',
-            'ouen-red':    '#E8554E',
-            'ouen-navy':   '#1F4F6B',
-            'ouen-brown':  '#8B5A2B',
-          },
-          fontFamily: {
-            rounded: ['"M PLUS Rounded 1c"', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind (static build) -->
+  <link rel="stylesheet" href="dist/style.css" />
 
   <style>
     html, body { font-family: 'M PLUS Rounded 1c', sans-serif; }
@@ -109,6 +93,8 @@
   <span class="hidden sm:inline">📝 お申込みはこちら</span>
 </a>
 
+
+<main>
 
 <!-- ════════════════════════════════
      思い本文
@@ -215,6 +201,8 @@
   </div>
 </section>
 
+
+</main>
 
 <!-- ════════════════════════════════
      FOOTER
