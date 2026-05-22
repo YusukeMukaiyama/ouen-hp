@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/mascot-beer.png" />
+  <link rel="apple-touch-icon" href="images/mascot-beer.png" />
+
+  <!-- SEO -->
+  <title>グルメ探検隊の思い | 北河内応援プロジェクト</title>
+  <meta name="description" content="北河内をこよなく愛するグルメ探検隊が、なぜHP制作で地元事業者を応援するのか。最新AIを活用して相場の1/5の価格を実現した背景と、地元への思いをお伝えします。" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="グルメ探検隊の思い | 北河内応援プロジェクト" />
+  <meta property="og:description" content="ほんまに地元のために。最新AIで相場の1/5を実現したグルメ探検隊の、北河内への思い。" />
+  <meta property="og:image" content="https://ouen-hp.jp/images/mascot-beer.png" />
+  <meta property="og:url" content="https://ouen-hp.jp/omoi.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="グルメ探検隊のHP制作" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ouen-yellow': '#FFE042',
+            'ouen-cream':  '#FFF4B8',
+            'ouen-red':    '#E8554E',
+            'ouen-navy':   '#1F4F6B',
+            'ouen-brown':  '#8B5A2B',
+          },
+          fontFamily: {
+            rounded: ['"M PLUS Rounded 1c"', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html, body { font-family: 'M PLUS Rounded 1c', sans-serif; }
+
+    .stripe-red {
+      background: repeating-linear-gradient(
+        -45deg,
+        #E8554E 0px, #E8554E 16px,
+        #D44040 16px, #D44040 32px
+      );
+    }
+
+    /* マーカー風アンダーライン */
+    .marker {
+      background: linear-gradient(transparent 60%, #FFE042 60%);
+      padding: 0 .1em;
+    }
+    .marker-red {
+      background: linear-gradient(transparent 60%, rgba(232,85,78,0.35) 60%);
+      padding: 0 .1em;
+    }
+
+    /* フローティングCTA */
+    @keyframes pulse-cta {
+      0%, 100% { transform: scale(1); box-shadow: 0 10px 28px rgba(232,85,78,0.45); }
+      50%      { transform: scale(1.04); box-shadow: 0 16px 36px rgba(232,85,78,0.65); }
+    }
+    .animate-pulse-cta { animation: pulse-cta 2.4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-ouen-yellow text-ouen-navy">
+
+<!-- ════════════════════════════════
+     HEADER
+════════════════════════════════ -->
+<div class="sticky top-0 z-50">
+  <div class="bg-ouen-red text-white text-center font-bold py-1.5 px-2 leading-snug">
+    <span class="sm:hidden text-[11px]">📢 ご相談はこちら👇 インスタDM / LINE / メール</span>
+    <span class="hidden sm:inline text-xs">📢 ご相談はインスタDM・LINE・メールの3つの方法でお気軽にどうぞ！</span>
+  </div>
+  <header class="bg-ouen-navy shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 py-2.5 sm:py-3">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3">
+        <a href="index.html" class="font-black text-center sm:text-left hover:opacity-80 transition">
+          <span class="text-ouen-yellow text-base">🐒 グルメ探検隊のHP制作</span>
+          <span class="text-white/40 text-xs ml-2 hidden sm:inline">北河内応援プロジェクト</span>
+        </a>
+        <a href="index.html" class="bg-ouen-yellow text-ouen-navy text-[11px] sm:text-xs font-black px-3 py-2 rounded-full hover:opacity-90 transition whitespace-nowrap">
+          ← トップに戻る
+        </a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- フローティング申込みCTA -->
+<a href="https://forms.gle/4SzSsPndtteQXCSL8" target="_blank" rel="noopener noreferrer"
+   class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-40 bg-ouen-red text-white font-black text-xs sm:text-sm md:text-base px-3.5 py-2.5 sm:px-5 sm:py-3.5 md:px-6 md:py-4 rounded-full shadow-2xl border-2 border-white hover:scale-105 transition-transform animate-pulse-cta whitespace-nowrap">
+  <span class="sm:hidden">📝 お申込み</span>
+  <span class="hidden sm:inline">📝 お申込みはこちら</span>
+</a>
+
+
+<!-- ════════════════════════════════
+     思い本文
+════════════════════════════════ -->
+<section class="bg-ouen-yellow py-12 md:py-20">
+  <div class="max-w-3xl mx-auto px-4">
+
+    <!-- pill + 見出し -->
+    <div class="text-center mb-8 md:mb-10">
+      <div class="inline-block bg-ouen-red text-white text-xs font-black px-4 py-1.5 rounded-full mb-5 shadow">
+        🐒 グルメ探検隊の思い
+      </div>
+      <h1 class="text-2xl md:text-4xl font-black text-ouen-navy leading-tight">
+        <span class="marker-red">得意を活かして、</span><br>
+        地元に恩返しを。
+      </h1>
+    </div>
+
+    <!-- 白いカード本文 -->
+    <article class="bg-white rounded-3xl shadow-md border-2 border-ouen-yellow/60 px-6 py-8 md:px-12 md:py-14">
+      <div class="space-y-6 md:space-y-7 text-ouen-navy/90 text-[15px] md:text-lg leading-[2]">
+
+        <p>僕は枚方市出身の30代です。</p>
+
+        <p>
+          新型コロナが流行ったとき、インターネット関係の仕事をしていて、利用者が増えて忙しくなりました。<br>
+          でも一方で、地元の飲食店が次々と苦しくなっていく。
+        </p>
+
+        <p>
+          その状況を見て、何かできることはないかと思って始めたのが、このグルメ探検隊のインスタでした。<br>
+          個人で頑張っているお店を中心に回って、その魅力をひとつずつ発信する。
+        </p>
+
+        <blockquote class="border-l-4 border-ouen-red pl-5 my-2 text-ouen-navy">
+          <p class="font-bold leading-relaxed">「頑張っている地元のお店を、一人でも多くの人に知ってほしい」</p>
+          <p class="mt-2 text-sm md:text-base text-ouen-navy/70">そんな気持ちで発信を続けてきました。</p>
+        </blockquote>
+
+        <p>
+          最近、AIの技術がすごく進んで、エンジニアの友人と話していたとき、「これを上手く使って地元に貢献できないかな」という話になりました。<br>
+          そこから生まれたのが、この「北河内HP応援プロジェクト」です。
+        </p>
+
+        <p>
+          HP制作って、これまでは初期費用も保守料も高くて、個人店にはハードルが高い世界でした。<br>
+          でも、AIをうまく使うことで、価格を抑えながら、クオリティの高いHPを作れるようになりました。<br>
+          お店のGoogleマップやInstagramにHPのリンクが1本あるだけで、お店の見え方は大きく変わります。
+        </p>
+
+        <p>
+          「味には自信があるから、もっと多くの人に届けたい…」<br>
+          「技術はあるのに、なかなか知ってもらえない…」
+        </p>
+
+        <p>
+          そんな悩みを持つ、地元で頑張っている方たちを、少しでもこのプロジェクトで応援できたらと思っています。
+        </p>
+
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     締めCTA
+════════════════════════════════ -->
+<section class="bg-ouen-cream py-14 md:py-20">
+  <div class="max-w-3xl mx-auto px-4 text-center">
+
+    <h2 class="text-xl md:text-3xl font-black text-ouen-navy leading-relaxed mb-4">
+      「ちょっと相談してみようかな」<br>
+      と思っていただけたら、嬉しいです🍻
+    </h2>
+    <p class="text-sm md:text-base text-ouen-navy/70 font-bold mb-8">
+      「HPの相談です」の一言だけでOK。<br>
+      まずは無料相談だけでもお気軽にどうぞ。
+    </p>
+
+    <a href="https://forms.gle/4SzSsPndtteQXCSL8" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-ouen-red text-white font-black text-base md:text-lg px-10 py-4 md:px-12 md:py-5 rounded-full shadow-2xl hover:scale-105 transition-transform mb-10">
+      📝 お申込みフォームへ進む
+    </a>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-2xl mx-auto">
+      <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+         class="block text-center bg-white text-ouen-red font-black text-base px-3 py-4 rounded-2xl border-2 border-ouen-red/20 hover:scale-105 transition-transform shadow-md whitespace-nowrap">
+        📩 インスタDMで相談
+      </a>
+      <a href="https://lin.ee/uV6KUCu" target="_blank" rel="noopener noreferrer"
+         class="block text-center bg-[#06C755] text-white font-black text-base px-3 py-4 rounded-2xl hover:scale-105 transition-transform shadow-md whitespace-nowrap">
+        💬 LINEで相談
+      </a>
+      <a href="mailto:ouenhp@gmail.com"
+         class="block text-center bg-ouen-yellow text-ouen-navy font-black text-base px-3 py-4 rounded-2xl hover:scale-105 transition-transform shadow-md whitespace-nowrap">
+        ✉️ メールで相談
+      </a>
+    </div>
+
+    <p class="mt-10 text-xs md:text-sm text-ouen-navy/50">
+      <a href="index.html" class="hover:text-ouen-navy underline underline-offset-4">← トップに戻る</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════
+     FOOTER
+════════════════════════════════ -->
+<footer class="bg-ouen-navy py-8">
+  <div class="max-w-5xl mx-auto px-4 text-center space-y-2">
+    <p class="text-white font-black text-base md:text-lg">
+      🐒 グルメ探検隊のHP制作 — 北河内応援プロジェクト
+    </p>
+    <a href="https://www.instagram.com/gurume_tanken/" target="_blank" rel="noopener noreferrer"
+       class="text-ouen-yellow font-bold text-sm hover:underline block">
+      Instagram: @gurume_tanken
+    </a>
+    <p class="text-white/30 text-xs">© 2025 グルメ探検隊</p>
+  </div>
+</footer>
+
+</body>
+</html>
