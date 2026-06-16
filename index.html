@@ -12,6 +12,9 @@
   <title>グルメ探検隊のHP制作 | 北河内応援プロジェクト</title>
   <meta name="description" content="北河内(枚方・寝屋川・交野・四條畷・大東・門真・守口)で頑張る地元のお店・事業者さんを応援。最新AIをフル活用して、相場40〜60万のHPを応援価格9万円ポッキリで。業種は問いません。" />
 
+  <!-- Canonical URL（クエリ付きURL等の分散インデックス防止） -->
+  <link rel="canonical" href="https://ouen-hp.jp/" />
+
   <!-- OGP -->
   <meta property="og:title" content="グルメ探検隊のHP制作 | 北河内応援プロジェクト" />
   <meta property="og:description" content="最新AIをフル活用して破格9万円ポッキリ。北河内の地元事業者を応援するHP制作。飲食・美容・整体・教室・士業・職人 歓迎。" />
@@ -35,6 +38,48 @@
 
   <!-- Tailwind (static build) -->
   <link rel="stylesheet" href="dist/style.css" />
+
+  <!-- JSON-LD 構造化データ（LocalBusiness + サービス提供範囲） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "グルメ探検隊のHP制作",
+    "alternateName": "北河内応援プロジェクト",
+    "image": "https://ouen-hp.jp/images/mascot-beer.webp",
+    "url": "https://ouen-hp.jp/",
+    "description": "北河内（枚方・寝屋川・交野・四條畷・大東・門真・守口）で頑張る地元のお店・事業者さんを応援。最新AIをフル活用して、相場40〜60万のHPを応援価格9万円ポッキリで制作します。",
+    "priceRange": "¥90,000",
+    "areaServed": [
+      { "@type": "City", "name": "枚方市" },
+      { "@type": "City", "name": "寝屋川市" },
+      { "@type": "City", "name": "交野市" },
+      { "@type": "City", "name": "四條畷市" },
+      { "@type": "City", "name": "大東市" },
+      { "@type": "City", "name": "門真市" },
+      { "@type": "City", "name": "守口市" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/gurume_tanken/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "ホームページ制作プラン",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "price": "90000",
+          "priceCurrency": "JPY",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "応援プラン HP制作",
+            "description": "スマホ最適化・Instagram埋め込み・お問い合わせフォーム・独自ドメイン取得サポート・SEO基本設定・実績ギャラリー込みのワンプラン。"
+          }
+        }
+      ]
+    }
+  }
+  </script>
 
   <style>
     /* ベース */
