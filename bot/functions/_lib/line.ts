@@ -89,9 +89,11 @@ export async function replyOrPush(
 ) {
   if (replyToken) {
     const ok = await reply(env, replyToken, messages);
+    console.log(`DEBUG reply() ok=${ok}`);
     if (ok) return;
   }
-  await push(env, to, messages);
+  const pushOk = await push(env, to, messages);
+  console.log(`DEBUG push() ok=${pushOk}`);
 }
 
 export function textMessage(text: string) {
