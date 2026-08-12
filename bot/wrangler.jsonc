@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ouenhp-line-cms",
+  "compatibility_date": "2026-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/worker-entry.ts",
+  "kv_namespaces": [
+    {
+      "binding": "PENDING_IMAGES",
+      // Phase 4で `wrangler kv namespace create PENDING_IMAGES` 実行後、発行されたidに置き換える。
+      "id": "REPLACE_WITH_KV_NAMESPACE_ID"
+    }
+  ]
+}

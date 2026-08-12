@@ -3,6 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    # bot/ はCloudflare Workers Builds側で独立にビルド・デプロイされる別デプロイ単位のため、
+    # bot/配下だけの変更でサイトを再ビルドしない。
+    paths-ignore:
+      - "bot/**"
   workflow_dispatch:
 
 permissions:
