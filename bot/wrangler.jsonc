@@ -7,8 +7,9 @@
   "kv_namespaces": [
     {
       "binding": "PENDING_IMAGES",
-      // Phase 4で `wrangler kv namespace create PENDING_IMAGES` 実行後、発行されたidに置き換える。
-      "id": "REPLACE_WITH_KV_NAMESPACE_ID"
+      // KV namespaceのタイトルは"ouenhp-line-cms-PENDING_IMAGES"(line-site-cmsの既存
+      // "PENDING_IMAGES"と衝突するため)。bindingは既存コードに合わせてPENDING_IMAGESのまま。
+      "id": "af3a0a2d5f864ef89d6a64722b5eadd4"
     }
   ]
 }
