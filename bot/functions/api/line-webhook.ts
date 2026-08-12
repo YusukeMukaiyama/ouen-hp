@@ -205,11 +205,9 @@ async function handleEditRequest(env: Env, event: LineEvent, senderId: string) {
       userMessage,
       image,
     });
-    console.log(`DEBUG proposal.action=${proposal.action} replyToken=${event.replyToken ?? "none"}`);
 
     if (proposal.action === "clarify") {
       await replyOrPush(env, event.replyToken, senderId, [textMessage(proposal.question)]);
-      console.log("DEBUG clarify replyOrPush call completed");
       return;
     }
 
@@ -267,12 +265,10 @@ async function handleEditRequest(env: Env, event: LineEvent, senderId: string) {
       );
     }
     await putFile(env, NEWS_PATH, JSON.stringify(nextItems, null, 2) + "\n", commitMessage, branch, sha);
-    console.log(`DEBUG branch ${branch} committed, about to send confirm message`);
 
     await replyOrPush(env, event.replyToken, senderId, [
       confirmQuickReply(`${previewText}\n\n上記の内容で公開しますか?`, branch),
     ]);
-    console.log("DEBUG confirm replyOrPush call completed");
   } catch (err) {
     console.error("handleEditRequest failed", err);
     await replyOrPush(env, event.replyToken, senderId, [

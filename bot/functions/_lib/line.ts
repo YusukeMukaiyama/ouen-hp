@@ -89,11 +89,12 @@ export async function replyOrPush(
 ) {
   if (replyToken) {
     const ok = await reply(env, replyToken, messages);
-    console.log(`DEBUG reply() ok=${ok}`);
     if (ok) return;
   }
   const pushOk = await push(env, to, messages);
-  console.log(`DEBUG push() ok=${pushOk}`);
+  // reply・pushの両方が失敗すると呼び出し元は例外なしで正常終了してしまい、
+  // ユーザーには何も届かないまま気づけない。診断のため失敗時だけ明示的に警告する。
+  if (!pushOk) console.error("replyOrPush: both reply and push failed");
 }
 
 export function textMessage(text: string) {
