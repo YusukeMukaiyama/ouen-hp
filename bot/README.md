@@ -76,6 +76,13 @@ https://console.anthropic.com/ で発行(Claude Codeのサブスクとは別課�
 4. Cloudflareダッシュボード → 対象Worker → Settings → ビルド → 「接続」で`ouen-hp`リポジトリと
    連携。**ルートディレクトリを`bot`に設定する**(モノレポのため。設定しないとリポジトリ直下を
    ビルド対象にしてしまい失敗する)。以後`bot/`配下の変更をpushすると自動ビルド・デプロイ
+   - **罠**: Cloudflareの「接続」UIのリポジトリ候補には、GitHub側の
+     Cloudflare Workers and PagesアプリのInstallation設定(Repository access)で
+     許可されているリポジトリしか出てこない(検索すれば未許可のものも一覧には出るが、
+     選択して接続してもビルドが一切トリガーされない)。line-site-cms構築時に
+     `line-site-cms`と`EGUCHIMAN_v3`だけを許可していたため、`ouen-hp`を新たに追加する
+     必要があった。https://github.com/settings/installations → Cloudflare Workers and
+     Pages → Configure → Repository access で対象リポジトリを追加してから「接続」する
 
 ### 4. LINE Webhook URLの設定
 
