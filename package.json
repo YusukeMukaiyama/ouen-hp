@@ -2,10 +2,13 @@
   "name": "ouen-hp",
   "private": true,
   "scripts": {
+    "build": "npm run build:css && npm run build:news",
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
+    "build:news": "node scripts/build-news.mjs",
     "watch:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "zod": "^4.4.3"
   }
 }
